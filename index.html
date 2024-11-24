@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animal Tables</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="bigCats-table-container"></div>
+    <button onclick="showPopup('bigCats')">Add Big Cat</button>
+
+    <div id="dogs-table-container"></div>
+    <button onclick="showPopup('dogs')">Add Dog</button>
+
+    <div id="bigFish-table-container"></div>
+    <button onclick="showPopup('bigFish')">Add Big Fish</button>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="hidden">
+      <div class="popup-content">
+        <h3 id="popup-title">Add Item</h3>
+        <form id="popup-form">
+          <label>
+            Species: <input type="text" name="species" required />
+          </label>
+          <label> Name: <input type="text" name="name" required /> </label>
+          <label> Size: <input type="text" name="size" required /> </label>
+          <label>
+            Location: <input type="text" name="location" required />
+          </label>
+          <label>
+            Image:
+            <input type="file" name="image" accept="image/*" id="image-input" />
+          </label>
+
+          <label id="image-preview" style="margin: 10px 0">
+            <p>No image selected.</p>
+          </label>
+          <button type="button" onclick="submitPopupForm()">Submit</button>
+          <button type="button" onclick="hidePopup()">Close</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
